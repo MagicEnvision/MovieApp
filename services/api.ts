@@ -21,7 +21,6 @@ export const fetchMovies = async({ query }: {query: string}) =>{
 
     if(!response){
 
-
         throw new Error('failed to fetch movies', response.statusText)
     }
 
