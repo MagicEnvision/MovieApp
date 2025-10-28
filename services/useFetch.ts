@@ -32,11 +32,11 @@ const useFetch = <T>(fetchFunction: () => Promise<T>, autofetch = true) => {
             if(autofetch){
                 fetchData()
             }
-        })
+        }, [])
 
-        return [data, loading, error, refetch: fetchData, reset]
+        return {data, loading, error, refetch: fetchData, reset}
 
 }
 
 
-export default useFetch
+export default useFetch 
